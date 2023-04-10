@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e42122bcc9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="orase.css">
+    <title>Danemarca</title>
+    <link rel="icon" type="image/x-icon" href="/images/thumb2-flag-of-denmark-concrete-texture-stone-background-denmark-flag-europe.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header" >
+        <img src="images/thumb2-flag-of-denmark-concrete-texture-stone-background-denmark-flag-europe.jpg" alt="" width="90px">
+        <h1>Danemarca</h1>
+        <br>
+        <h3>Democrație socială</h3>
+    </div> 
+    <!--Navigatie-->
+    <div class="navigation">
+
+        <a href="main.html" class="main">Acasă</a>
+        <div class="navbar">
+            <button class="navbut">Aspecte ale geografiei fizice <i class="fa fa-caret-down"></i></button>
+            <div class="butcontent">
+                <a href="localizare.html">Localizare</a>
+                <a href="reliefsiclima.html">Relieful și Clima</a>
+                <a href="florasifauna.html">Flora și Fauna</a>
+            </div>
+        </div>
+        <div class="navbar">
+            <button class="navbut">Demografie <i class="fa fa-caret-down"></i></button>
+            <div class="butcontent">
+                <a href="generale.html">Date generale</a>
+                <a href="cultura.html">Cultura și civilizație</a>
+                <a href="orase.html">Orașele principale</a>
+            </div>
+        </div>
+        <div class="navbar">
+            <button class="navbut">Economia, sistemul politic și armata <i class="fa fa-caret-down"></i></button>
+            <div class="butcontent">
+                <a href="economia.html">Economia</a>
+                <a href="politic.html">Sistemul politic</a>
+                <a href="armata.html">Armata</a>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; padding-top: 50px;">Orașele Principale</h1>
+    <!--Slideshow Copenhaga-->
+    <h2 style="text-align: center; padding-top: 10px;">Copenhaga</h2>
+    <div class="slideshow">
+        <!--Imagini-->
+        <div class="slides1">
+            <div class="number">1 / 6</div>
+            <img src="..//images/orase/copenhaga slideshow/nyhavn.png" style="width: 100%">
+            <div class="text">Canalul Nyhavn</div>
+        </div>
+        <div class="slides1">
+            <div class="number">2 / 6</div>
+            <img src="/images/orase/copenhaga slideshow/Tivoli Gardens.png" style="width: 100%">
+            <div class="text">Grădinile Tivoli</div>
+        </div>
+        <div class="slides1">
+            <div class="number">3 / 6</div>
+            <img src="/images/orase/copenhaga slideshow/amager bakke.png" style="width: 100%">
+            <div class="text">Amager Bakke</div>
+        </div>
+        <div class="slides1">
+            <div class="number">4 / 6</div>
+            <img src="/images/orase/copenhaga slideshow/Little mermaid Statue.png" style="width: 100%">
+            <div class="text">Statuia Micii Sirene</div>
+        </div>
+        <div class="slides1">
+            <div class="number">5 / 6</div>
+            <img src="/images/orase/copenhaga slideshow/Christiansborg Palace.png" style="width: 100%">
+            <div class="text">Palatul Christiansborg</div>
+        </div>
+        <div class="slides1">
+            <div class="number">6 / 6</div>
+            <img src="/images/orase/copenhaga slideshow/Botanical Garden.png" style="width: 100%">
+            <div class="text">Grădina Botanică</div>
+        </div>
+        <!--Butoane succesor predecesor-->
+        <a class="pred1" onclick="plusSlides1(-1)">&#10094;</a>
+        <a class="succ1" onclick="plusSlides1(1)">&#10095;</a>
+    </div>
+    <br>
+    <!--Puncte-->
+    <div style="text-align: center">
+        <span class="dot1" onclick="currentSLide1(1)"></span>
+        <span class="dot1" onclick="currentSLide1(2)"></span>
+        <span class="dot1" onclick="currentSLide1(3)"></span>
+        <span class="dot1" onclick="currentSLide1(4)"></span>
+        <span class="dot1" onclick="currentSLide1(5)"></span>
+        <span class="dot1" onclick="currentSLide1(6)"></span>
+    </div>
+    <!--script slideshow Copenhaga-->
+    <script>          
+        let slideIndex1=1;
+        showSlides1(slideIndex1);
+        function plusSlides1(n){
+            showSlides1(slideIndex1+=n);
+        }
+        function currentSLide1(n){
+            showSlides1(slideIndex1=n);
+        }
+        function showSlides1(n){
+            let i;
+            let slideis1=document.getElementsByClassName("slides1");
+            let dots1=document.getElementsByClassName("dot1");
+            if(n>slideis1.length){slideIndex1=1;}
+            if(n<1){slideIndex1=slideis1.length;}
+            for(i=0;i<slideis1.length;i++)
+            {
+                slideis1[i].style.display="none";
+            }
+            for(i=0;i<dots1.length;i++)
+            {
+                dots1[i].className=dots1[i].className.replace(" active","");
+            }
+            slideis1[slideIndex1-1].style.display="block";
+            dots1[slideIndex1-1].className+=" active";
+        }
+    </script>
+    <!--section counter Copenhaga-->
+    <div class="counter">
+        <div class="unic">
+            <div class="card">
+                <p style="padding-bottom: 8px;"><i class="fas fa-users"></i></p>
+                <h3 style="padding-bottom: 8px;">1,336,982</h3>
+                <p style="padding-bottom:3px ;">locuitori<p>
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card">
+                <p><i class="fas fa-beer"></i></p>
+                <h3>1847</h3>
+                <p>anul în care a fost <br> fondată Carlsberg în Copenhaga</p>
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card" style="text-align: center; ">
+                <p style="padding-bottom: 8px;"><i class="fas fa-utensils"></i></p>
+                <h3 style="padding-bottom: 8px;">16</h3> 
+                <p style="padding-bottom: 3px;">Restaurante cu stele Michelin</p>
+               
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card">
+                <p><i class="fas fa-road"></i></p>
+                <h3>3.2 km</h3>
+                <p style="padding-bottom: 1px;">are Strøget, cea mai lungă <br> stradă pietonală din lume</p>
+            </div>
+        </div>
+    </div>
+    <!--Slideshow Aarhus-->
+    <h2 style="text-align: center; padding-top: 20px;">Aarhus</h2>
+    <div class="slideshow">
+        <!--Imagini-->
+        <div class="slides2">
+            <div class="number">1 / 6</div>
+            <img src="/images/orase/aarhus slideshow/Isbjerget.png" style="width: 100%">
+            <div class="text">Isbjerget</div>
+        </div>
+        <div class="slides2">
+            <div class="number">2 / 6</div>
+            <img src="/images/orase/aarhus slideshow/Marselisborg.png" style="width: 100%">
+            <div class="text">Palatul Marselisborg</div>
+        </div>
+        <div class="slides2">
+            <div class="number">3 / 6</div>
+            <img src="/images/orase/aarhus slideshow/Den Gamle By.png" style="width: 100%">
+            <div class="text">Den Gamle By</div>
+        </div>
+        <div class="slides2">
+            <div class="number">4 / 6</div>
+            <img src="/images/orase/aarhus slideshow/Bispetorv.png" style="width: 100%">
+            <div class="text">Bispetorv Aarhus</div>
+        </div>
+        <div class="slides2">
+            <div class="number">5 / 6</div>
+            <img src="/images/orase/aarhus slideshow/Catedrala Aarhus.png" style="width: 100%">
+            <div class="text">Catedrala Aarhus</div>
+        </div>
+        <div class="slides2">
+            <div class="number">6 / 6</div>
+            <img src="/images/orase/aarhus slideshow/Aarhus Kunstmuseum.png" style="width: 100%">
+            <div class="text">Aarhus Kunstmuseum</div>
+        </div>
+        <!--Butoane succesor predecesor-->
+        <a class="pred2" onclick="plusSlides2(-1)">&#10094;</a>
+        <a class="succ2" onclick="plusSlides2(1)">&#10095;</a>
+    </div>
+    <!--Puncte-->
+    <div style="text-align: center">
+        <span class="dot2" onclick="currentSLide2(1)"></span>
+        <span class="dot2" onclick="currentSLide2(2)"></span>
+        <span class="dot2" onclick="currentSLide2(3)"></span>
+        <span class="dot2" onclick="currentSLide2(4)"></span>
+        <span class="dot2" onclick="currentSLide2(5)"></span>
+        <span class="dot2" onclick="currentSLide2(6)"></span>
+    </div>
+    <!--script slideshow Aarhus-->
+    <script>          
+        let slideIndex2=1;
+        showSlides2(slideIndex2);
+        function plusSlides2(n){
+            showSlides2(slideIndex2+=n);
+        }
+        function currentSLide2(n){
+            showSlides2(slideIndex2=n);
+        }
+        function showSlides2(n){
+            let i;
+            let slideis2=document.getElementsByClassName("slides2");
+            let dots2=document.getElementsByClassName("dot2");
+            if(n>slideis2.length){slideIndex2=1;}
+            if(n<1){slideIndex2=slideis2.length;}
+            for(i=0;i<slideis2.length;i++)
+            {
+                slideis2[i].style.display="none";
+            }
+            for(i=0;i<dots2.length;i++)
+            {
+                dots2[i].className=dots2[i].className.replace(" active","");
+            }
+            slideis2[slideIndex2-1].style.display="block";
+            dots2[slideIndex2-1].className+=" active";
+        }
+    </script>
+    <!--section counter Aarhus-->
+    <div class="counter">
+        <div class="unic">
+            <div class="card">
+                <p style="padding-bottom: 8px;"><i class="fas fa-users"></i></p>
+                <h3 style="padding-bottom: 8px;">336.411</h3>
+                <p style="padding-bottom:3px ;">locuitori<p>
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card">
+                <p><i class="fas fa-church"></i></p>
+                <h3>93 m</h3>
+                <p>are Catedrala Aarhus<br> cea mai înaltă din țară</p>
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card" style="text-align: center; ">
+                <p style="padding-bottom: 8px;"><i class="fas fa-city"></i></p>
+                <h3 style="padding-bottom: 8px;">VIII</h3> 
+                <p style="padding-bottom: 3px;">este secolul în care a fost fondat orașul</p>
+               
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card">
+                <p><i class="fas fas fa-landmark"></i></p>
+                <h3>2017</h3>
+                <p style="padding-bottom: 5px;"> este anul în care Aarhus <br> a fost ales capitala europeană a culturii</p>
+            </div>
+        </div>
+    </div>
+    <!--Slideshow Odense-->
+    <h2 style="text-align: center; padding-top: 20px;">Odense</h2>
+    <div class="slideshow">
+        <!--Imagini-->
+        <div class="slides3">
+            <div class="number">1 / 6</div>
+            <img src="/images/orase/odense slideshow/Egeskov.png" style="width: 100%">
+            <div class="text">Castelul Egeskov</div>
+        </div>
+        <div class="slides3">
+            <div class="number">2 / 6</div>
+            <img src="/images/orase/odense slideshow/Primăria.png" style="width: 100%">
+            <div class="text">Primăria Odense</div>
+        </div>
+        <div class="slides3">
+            <div class="number">3 / 6</div>
+            <img src="/images/orase/odense slideshow/Palatul.png" style="width: 100%">
+            <div class="text">Palatul Odense</div>
+        </div>
+        <div class="slides3">
+            <div class="number">4 / 6</div>
+            <img src="/images/orase/odense slideshow/railway.png" style="width: 100%">
+            <div class="text">Muzeul danez al căilor ferate</div>
+        </div>
+        <div class="slides3">
+            <div class="number">5 / 6</div>
+            <img src="/images/orase/odense slideshow/galerie.png" style="width: 100%">
+            <div class="text">Galeria de artă Galschiot</div>
+        </div>
+        <div class="slides3">
+            <div class="number">6 / 6</div>
+            <img src="/images/orase/odense slideshow/christianandersen.png" style="width: 100%">
+            <div class="text">Muzeul Hans Christian Andersen</div>
+        </div>
+        <!--Butoane succesor predecesor-->
+        <a class="pred3" onclick="plusSlides3(-1)">&#10094;</a>
+        <a class="succ3" onclick="plusSlides3(1)">&#10095;</a>
+    </div>
+    <!--Puncte-->
+    <div style="text-align: center">
+        <span class="dot3" onclick="currentSLide3(1)"></span>
+        <span class="dot3" onclick="currentSLide3(2)"></span>
+        <span class="dot3" onclick="currentSLide3(3)"></span>
+        <span class="dot3" onclick="currentSLide3(4)"></span>
+        <span class="dot3" onclick="currentSLide3(5)"></span>
+        <span class="dot3" onclick="currentSLide3(6)"></span>
+    </div>
+     <!--script slideshow Aarhus-->
+     <script>          
+        let slideIndex3=1;
+        showSlides3(slideIndex3);
+        function plusSlides3(n){
+            showSlides3(slideIndex3+=n);
+        }
+        function currentSLide3(n){
+            showSlides3(slideIndex3=n);
+        }
+        function showSlides3(n){
+            let i;
+            let slideis3=document.getElementsByClassName("slides3");
+            let dots3=document.getElementsByClassName("dot3");
+            if(n>slideis3.length){slideIndex3=1;}
+            if(n<1){slideIndex3=slideis3.length;}
+            for(i=0;i<slideis3.length;i++)
+            {
+                slideis3[i].style.display="none";
+            }
+            for(i=0;i<dots3.length;i++)
+            {
+                dots3[i].className=dots3[i].className.replace(" active","");
+            }
+            slideis3[slideIndex3-1].style.display="block";
+            dots3[slideIndex3-1].className+=" active";
+        }
+    </script>
+    <!--section counter Odense-->
+    <div class="counter">
+        <div class="unic">
+            <div class="card">
+                <p style="padding-bottom: 8px;"><i class="fas fa-users"></i></p>
+                <h3 style="padding-bottom: 8px;">200.703</h3>
+                <p style="padding-bottom:3px ;">locuitori<p>
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card">
+                <p style="padding-bottom: 8px;"><i class="fas fa-person"></i></p>
+                <h3 style="padding-bottom: 8px;">164</h3>
+                <p style="padding-bottom: 3px;">de naționalități în Odense</p>
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card">
+                <p style="padding-bottom: 8px;"><i class="fas fa-bicycle"></i></p>
+                <h3 style="padding-bottom: 8px;">540 km</h3> 
+                <p style="padding-bottom: 3px;">de piste de biciclete sunt în Odense</p>
+            </div>
+        </div>
+        <div class="unic">
+            <div class="card">
+                <p style="padding-bottom: 8px;"><i class="fas fa-tower-observation"></i></p>
+                <h3 style="padding-bottom:8px;">177 m</h3>
+                <p style="padding-bottom: 3px;">avea turnul lui Odin distrus în 1944</p>
+            </div>
+        </div>
+    </div>
+     <!--Slideshow Aalborg-->
+     <h2 style="text-align: center; padding-top: 20px;">Aalborg</h2>
+     <div class="slideshow">
+         <!--Imagini-->
+         <div class="slides4">
+             <div class="number">1 / 6</div>
+             <img src="/images/orase/aalborg slideshow/Utzon.png" style="width: 100%">
+             <div class="text">Centrul Utzon</div>
+         </div>
+         <div class="slides4">
+             <div class="number">2 / 6</div>
+             <img src="/images/orase/aalborg slideshow/Springeren.png" style="width: 100%">
+             <div class="text">Springeren</div>
+         </div>
+         <div class="slides4">
+             <div class="number">3 / 6</div>
+             <img src="/images/orase/aalborg slideshow/garizoana.png" style="width: 100%">
+             <div class="text">Muzeul Apărării și Garnizoanei</div>
+         </div>
+         <div class="slides4">
+             <div class="number">4 / 6</div>
+             <img src="/images/orase/aalborg slideshow/Gråbrødrekloster.png" style="width: 100%">
+             <div class="text">Muzeul Gråbrødrekloster</div>
+         </div>
+         <div class="slides4">
+             <div class="number">5 / 6</div>
+             <img src="/images/orase/aalborg slideshow/jensbangs.png" style="width: 100%">
+             <div class="text">Casa Jens Bangs</div>
+         </div>
+         <div class="slides4">
+             <div class="number">6 / 6</div>
+             <img src="/images/orase/aalborg slideshow/LindholmHoeje.png" style="width: 100%">
+             <div class="text">Cimitirul viking Lindholm Hoeje</div>
+         </div>
+         <!--Butoane succesor predecesor-->
+         <a class="pred4" onclick="plusSlides4(-1)">&#10094;</a>
+         <a class="succ4" onclick="plusSlides4(1)">&#10095;</a>
+     </div>
+     <!--Puncte-->
+     <div style="text-align: center">
+         <span class="dot4" onclick="currentSLide4(1)"></span>
+         <span class="dot4" onclick="currentSLide4(2)"></span>
+         <span class="dot4" onclick="currentSLide4(3)"></span>
+         <span class="dot4" onclick="currentSLide4(4)"></span>
+         <span class="dot4" onclick="currentSLide4(5)"></span>
+         <span class="dot4" onclick="currentSLide4(6)"></span>
+     </div>
+      <!--script slideshow Aarhus-->
+      <script>          
+         let slideIndex4=1;
+         showSlides4(slideIndex4);
+         function plusSlides4(n){
+             showSlides4(slideIndex4+=n);
+         }
+         function currentSLide4(n){
+             showSlides4(slideIndex4=n);
+         }
+         function showSlides4(n){
+             let i;
+             let slideis4=document.getElementsByClassName("slides4");
+             let dots4=document.getElementsByClassName("dot4");
+             if(n>slideis4.length){slideIndex4=1;}
+             if(n<1){slideIndex4=slideis4.length;}
+             for(i=0;i<slideis4.length;i++)
+             {
+                 slideis4[i].style.display="none";
+             }
+             for(i=0;i<dots4.length;i++)
+             {
+                 dots4[i].className=dots4[i].className.replace(" active","");
+             }
+             slideis4[slideIndex4-1].style.display="block";
+             dots4[slideIndex4-1].className+=" active";
+         }
+     </script>
+     <!--section counter Odense-->
+     <div class="counter" style="padding-bottom: 20px;">
+         <div class="unic">
+             <div class="card">
+                 <p style="padding-bottom: 8px;"><i class="fas fa-users"></i></p>
+                 <h3 style="padding-bottom: 8px;">195,145</h3>
+                 <p style="padding-bottom:3px ;">locuitori<p>
+             </div>
+         </div>
+         <div class="unic">
+             <div class="card">
+                 <p><i class="fas fa-landmark-flag"></i></p>
+                 <h3>1759</h3>
+                 <p>anul în care a fost <br> construită primăria Aalborg</p>
+             </div>
+         </div>
+         <div class="unic">
+             <div class="card">
+                 <p><i class="fas fa-hippo"></i></p>
+                 <h3>100+</h3> 
+                 <p>animale exotice la <br> grădina zoologică din Aalborg</p>
+             </div>
+         </div>
+         <div class="unic">
+             <div class="card">
+                 <p><i class="fas fa-mask"></i></p>
+                 <h3>1983</h3>
+                 <p>a fost anul în care a avut <br> loc primul Carnaval din Aalborg</p>
+             </div>
+         </div>
+     </div>
+      <!--footer-->
+    <footer>
+        <div class="footer">
+            <div class="continut">
+                <div class="col1">
+                    <h3>Materiale utilizate</h3>                        
+                    <ul>
+                        <li><a href="bibliografie.html">Bibliografie</a></li>
+                        <li><a href="galerie.html">Galerie de imagini</a></li>
+                        <br>
+                    </ul>
+                </div>
+                <div class="cols item">
+                    <h3>Danemarca</h3>
+                    <p>Regatul Danemarcei este o monarhie constituțională organizată <br> sub forma unei democrații parlamentare, cu sediul guvernului în capitala Copenhaga. </p>
+                </div>
+            </div>
+            <!--copyright-->
+            <div class="copyright">
+                 <p>© 2022 Cozma Alexandru | Cătălin Ciobanu -- All rights reserved.</p>
+            </div>
+        </div>
+        </footer>
+</body>
+</html>

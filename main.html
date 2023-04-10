@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Danemarca</title>
+    <link rel="icon" type="image/x-icon" href="/images/thumb2-flag-of-denmark-concrete-texture-stone-background-denmark-flag-europe.jpg">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header" >
+        <img src="images/thumb2-flag-of-denmark-concrete-texture-stone-background-denmark-flag-europe.jpg" alt="" width="90px">
+        <h1>Danemarca</h1>
+        <br>
+        <h3>Democrație socială</h3>
+    </div> 
+    <!--Navigatie-->
+    <div class="navigation">
+
+        <a href="main.html" class="main">Acasă</a>
+        <div class="navbar">
+            <button class="navbut">Aspecte ale geografiei fizice <i class="fa fa-caret-down"></i></button>
+            <div class="butcontent">
+                <a href="localizare.html">Localizare</a>
+                <a href="reliefsiclima.html">Relieful și Clima</a>
+                <a href="florasifauna.html">Flora și Fauna</a>
+            </div>
+        </div>
+        <div class="navbar">
+            <button class="navbut">Demografie <i class="fa fa-caret-down"></i></button>
+            <div class="butcontent">
+                <a href="generale.html">Date generale</a>
+                <a href="cultura.html">Cultura și civilizație</a>
+                <a href="orase.html">Orașele principale</a>
+            </div>
+        </div>
+        <div class="navbar">
+            <button class="navbut">Economia, sistemul politic și armata <i class="fa fa-caret-down"></i></button>
+            <div class="butcontent">
+                <a href="economia.html">Economia</a>
+                <a href="politic.html">Sistemul politic</a>
+                <a href="armata.html">Armata</a>
+            </div>
+        </div>
+    </div>
+    <!--Slideshow-->
+    <div class="slideshow">
+        <!--Imagini-->
+        <div class="slides">
+            <div class="number">1 / 6</div>
+            <img src="images/slideshow/pod.png" style="width: 100%">
+            <div class="text">Inderhavnsbroen</div>
+        </div>
+        <div class="slides">
+            <div class="number">2 / 6</div>
+            <img src="images/slideshow/insula.png" style="width: 100%">
+            <div class="text">Insula Anholt</div>
+        </div>
+        <div class="slides">
+            <div class="number">3 / 6</div>
+            <img src="images/slideshow/canal.png" style="width: 100%">
+            <div class="text">Canalul Nyhavn</div>
+        </div>
+        <div class="slides">
+            <div class="number">4 / 6</div>
+            <img src="images/slideshow/casa.png" style="width: 100%">
+            <div class="text">Orașul Dragør</div>
+        </div>
+        <div class="slides">
+            <div class="number">5 / 6</div>
+            <img src="images/slideshow/satuc.png" style="width: 100%">
+            <div class="text">Bornholm</div>
+        </div>
+        <div class="slides">
+            <div class="number">6 / 6</div>
+            <img src="/images/slideshow/street.png" style="width: 100%">
+            <div class="text">Magstræde</div>
+        </div>
+        <!--Butoane succesor predecesor-->
+        <a class="pred" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="succ" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <!--Puncte-->
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSLide(1)"></span>
+        <span class="dot" onclick="currentSLide(2)"></span>
+        <span class="dot" onclick="currentSLide(3)"></span>
+        <span class="dot" onclick="currentSLide(4)"></span>
+        <span class="dot" onclick="currentSLide(5)"></span>
+        <span class="dot" onclick="currentSLide(6)"></span>
+    </div>
+    <!--script slideshow-->
+    <script>
+        let slideIndex=1;
+        showSlides(slideIndex);
+        function plusSlides(n){
+            showSlides(slideIndex+=n);
+        }
+        function currentSLide(n){
+            showSlides(slideIndex=n);
+        }
+        function showSlides(n){
+            let i;
+            let slideis=document.getElementsByClassName("slides");
+            let dots=document.getElementsByClassName("dot");
+            if(n>slideis.length){slideIndex=1;}
+            if(n<1){slideIndex=slideis.length;}
+            for(i=0;i<slideis.length;i++)
+            {
+                slideis[i].style.display="none";
+            }
+            for(i=0;i<dots.length;i++)
+            {
+                dots[i].className=dots[i].className.replace(" active","");
+            }
+            slideis[slideIndex-1].style.display="block";
+            dots[slideIndex-1].className+=" active";
+        }
+    </script>
+    <!-- footer -->
+    <footer>
+    <div class="footer">
+        <div class="continut">
+            <div class="col1">
+                <h3>Materiale utilizate</h3>                        
+                <ul>
+                    <li><a href="bibliografie.html">Bibliografie</a></li>
+                    <li><a href="galerie.html">Galerie de imagini</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="cols item">
+                <h3>Danemarca</h3>
+                <p>Regatul Danemarcei este o monarhie constituțională organizată <br> sub forma unei democrații parlamentare, cu sediul guvernului în capitala Copenhaga. </p>
+            </div>
+        </div>
+        <!--copyright-->
+        <div class="copyright">
+             <p>© 2022 Cozma Alexandru | Cătălin Ciobanu -- All rights reserved.</p>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
